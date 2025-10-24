@@ -66,7 +66,7 @@ app.use((req, res, next) => {
   });
 
   if (app.get("env") === "development") {
-    await setupVite(app, server);
+    await setupVite(app);
   } else {
     serveStatic(app);
   }

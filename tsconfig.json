@@ -12,7 +12,12 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include": ["server/**/*", "shared/**/*"]
+  "include": [
+    "server/**/*",
+    "shared/**/*",
+    "types/**/*"
+  ]
 }
