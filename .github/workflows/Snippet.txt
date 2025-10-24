@@ -1,0 +1,77 @@
+Snippet:-
+
+to find the time complexity for the given snippet 
+
+
+int I;
+for(i=1;i<=10;i++){
+--------
+----
+}
+
+PC=10 times
+
+Time Complexity is : O(10)
+
+a) N(10)
+b) 10 times
+c) O(10) times - correct
+d) None
+
+Q to find the output for the below snippet 
+
+int i,j
+for(i=1;i<5;i++){
+j=1;
+do{
+printf("%d", j);
+j++;
+}while(j<=1);
+}
+
+a) j is executed i times - correct
+b) i executed 10 times, j executed i times
+c) both a and b
+d) None
+
+
+--------------------------------------
+
+find thee output for the below code?
+int f1(int); ---prototype function
+void main(){
+
+---
+--
+f1(); ---function attachment
+--}
+int f1(int x){-- definition
+return 6;
+}
+
+a) output is 6
+
+------------------------------
+
+void f1(int,int);
+void main(){
+int a=5,b=6;
+f1(6,b);
+}
+void f1(int x,int y){
+printf("%d", x+y);
+}
+
+a) error 
+b) 11
+c) 12 - 
+d) none
+
+--------------------------------
+
+Which of the following is valid declaration for array?
+
+a) int x[5];
+b)
+c)
+d)

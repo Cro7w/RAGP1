@@ -1,0 +1,91 @@
+syn:4
+
+int i=1;
+for(;i<=5;){
+---
+--
+i++;
+}
+
+-----------------------------------------------------------
+
+syn:- while loop
+
+int I;
+while(i<=5){ //outer loop
+int j=1;
+while(j<=5){ //inner loop
+---
+----
+j++;
+}
+---
+i++;
+}
+------------------------------------------------------------
+
+Functions:
+
+-code block, used to implement a limited set of instructions,
+NOTE: every main method is called as driver method
+
+int main(){
+----
+----
+return 0;
+}
+
+or 
+
+void main(){
+--------
+----
+}
+
+or
+
+void main(void){
+---------
+--------
+}
+
+or 
+
+int main(argc,argv){
+--------------
+------
+return 0;
+}
+
+--------------------------------------------------------------
+
+local var-
+global variable:
+
+--------------------------------------------------------------
+
+Array:-
+
+ container object/memory allocation, used to store related data elements.
+-shared memory
+-memory identifier is the names is same, but address is different 
+int x[5];
+x[0]=10;
+x[1]=20;
+x[2]=30;
+x[3]=40;
+
+--------------------------------------------------------------
+
+Note: x n x n is also valid 
+
+int x[]={elements};
+int x[][]={{,,,},{,,,},{,,,}}
+
+
+<data type> *<identifier name>
+
+Ex:-
+int *p;
+
+Note:- fetch address using 
