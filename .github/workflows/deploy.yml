@@ -1,31 +1,39 @@
-name: Deploy to GitHub Pages
+name: BonVoyage Deploy
 
+# Trigger workflow on pushes to main branch
 on:
   push:
     branches:
-      - main   # Trigger deploy on push to main branch
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # 1️ Checkout the repository
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # 2️ Setup Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 20
 
+      # 3️ Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build   # Make sure your build outputs to ./public
+      # 4️ Build the app
+      - name: Build BonVoyage
+        run: npm run build
 
+      # 5️ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Built-in token for push access
+          publish_branch: gh-pages                   # Branch for GitHub Pages
+          publish_dir: ./dist                        # Output directory from Vite build
+          force_orphan: true                          # Optional, ensures clean branch
